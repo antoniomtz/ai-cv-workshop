@@ -1,16 +1,15 @@
 {
   "private": true,
   "scripts": {
-    "build": "slidev build",
-    "dev": "nodemon -w '../../packages/slidev/dist/*.mjs' --exec \"slidev ./slides.md --open=false --log=info --inspect\"",
-    "export": "slidev export",
-    "export-notes": "slidev export-notes"
+    "build": "./slidev.sh build",
+    "dev": "./slidev.sh dev",
+    "export": "./slidev.sh export"
   },
-  "devDependencies": {
-    "@slidev/cli": "workspace:*",
-    "@slidev/theme-default": "^0.25.0",
-    "@slidev/theme-seriph": "^0.25.0",
-    "@slidev/types": "workspace:*",
-    "nodemon": "^3.0.3"
-  }
+  "dependencies": {
+    "@slidev/cli": "^0.30.3",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*",
+    "playwright-chromium": "^1.21.1"
+  },
+  "name": "slides"
 }
