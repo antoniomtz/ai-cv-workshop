@@ -27,10 +27,10 @@ jobs:
           node-version: 'lts/*'
 
       - name: Install dependencies
-        run: cd slides && npm install
+        run: npm install
 
       - name: Build
-        run: cd slides && npm run build -- --base /ai-cv-workshop/
+        run: npm run build -- --base /ai-cv-workshop/
 
       - uses: actions/configure-pages@v4
 
