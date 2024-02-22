@@ -15,7 +15,7 @@ jobs:
       - name: Install for PDF  
         run: npm i -D playwright-chromium
       - name: Build
-        run: slidev build --base /baseC/
+        run: slidev build --base /ai-cv-workshop/
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
