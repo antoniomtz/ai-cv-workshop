@@ -16,9 +16,10 @@ jobs:
         run: npm i -D playwright-chromium
       - name: Build
         run: slidev build --base /ai-cv-workshop/
-      - name: Deploy pages
-        uses: crazy-max/ghaction-github-pages@v2
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
         with:
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: dist
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
