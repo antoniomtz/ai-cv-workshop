@@ -9,9 +9,13 @@ jobs:
         with:
           node-version: '14'
       - name: Install dependencies
-        run: yarn install
+        run: npm install
+      - name: Install slidev
+        run:  npm i -g @slidev/cli
+      - name: Install for PDF  
+        run: npm i -D playwright-chromium
       - name: Build
-        run: yarn build
+        run: slidev build --base /baseC/
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v2
         with:

@@ -1,15 +1,14 @@
 {
+  "name": "base_c",
   "private": true,
   "scripts": {
-    "build": "./slidev.sh build",
-    "dev": "./slidev.sh dev",
-    "export": "./slidev.sh export"
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.30.3",
+    "@slidev/cli": "^0.34.3",
     "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*",
-    "playwright-chromium": "^1.21.1"
-  },
-  "name": "slides"
+    "@slidev/theme-seriph": "*"
+  }
 }
