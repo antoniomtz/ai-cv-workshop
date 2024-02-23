@@ -1,571 +1,439 @@
 ---
-theme: 'default'
-layout: cover
-title: 'La programmazione in C'
-highlighter: 'shiki'
-class: 'text-center'
-info: 'La programmazione in C'
-lineNumbers: true
-download: true
-fonts:
-  sans: 'Roboto'
-  serif: 'Roboto Slab'
-  mono: 'Fira Code'
-  
-  
----
-# La programmazione in C
+theme: seriph
+background: https://source.unsplash.com/collection/94734566/1920x1080
+class: text-center
+highlighter: shiki
+lineNumbers: false
+info: |
+  ## Slidev Starter Template
+  Presentation slides for developers.
 
----
-
-# Sommario
-
-- L'ambiente online Replit
-- La struttura di base dei programmi in C
-- I tipi di dati fondamentali
-- Variabili
-- Costanti
-
+  Learn more at [Sli.dev](https://sli.dev)
+drawings:
+  persist: false
+defaults:
+  foo: true
+transition: slide-left
+title: Welcome to Slidev
+mdc: true
 ---
 
-# L'ambiente online Replit
+# Welcome to Slidev
 
-<img src="/replit.png"/>
+Presentation slides for developers
 
-<style>
- img{
-  margin: auto;
-  width: 90%;
- } 
-
-</style>
-
----
-
-# La struttura di base dei programmi in C
-
-L'esempio mostra la struttura di un tipico programma in C.
-
-L'istruzione <code>int main(void)</code> dichiara una funzione che non è di una libreria: infatti **main** è la funzione principale, che dev'essere presente in ogni programma in C.
-
-```c {all|3,4,13|5-7|9-10|12|1|all}
-#include <stdio.h>
-
-int main(void) 
-{ 
-  int eta; 
-  char pokemon[] = "Bulbasaur";
-  eta = 6;
-
-  printf("Il mio pokemon preferito è: %s", pokemon);
-  printf(", da quando avevo %d anni.\n", eta);
-
-  return 0;
-}
-```
----
-clicks: 3
----
-
-# La struttura di base dei programmi in C
-Un programma si compone di tre parti fondamentali:
-
-<div class="flex">
-  <div class="basis-1/2">
-
-```c {all|1|3,4,13|5-12}
-  #include <stdio.h>
-
-  int main(void) 
-  { 
-    int eta;  
-    char pokemon[] = "Bulbasaur";
-    eta = 6;
-
-    printf("Il mio pokemon preferito è: %s", pokemon);
-    printf(", da quando avevo %d anni.\n", eta);
-
-    return 0;
-  }
-```
-  </div>
-  <div class="basis-1/2">
-      <ol class="mx-8">
-        <li v-click="1">Librerie</li>
-        <li v-click="2">Main</li>
-        <li v-click="3">Corpo del programma</li>
-      </ol>
-  </div>
+<div class="pt-12">
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    Press Space for next page <carbon:arrow-right class="inline"/>
+  </span>
 </div>
 
-Ogni istruzione deve terminare con il punto e virgola (;).
-
----
-
-# I tipi di dati fondamentali
-
-
-<div class="flex">
-  <div class="basis-1/4">
-  </div>
-  <div class="basis-2/4 my-8">
-
-```mermaid {theme: 'default'}
-graph TD
-    A[Tipi di dato]
-    A --> B(Interi)
-    A --> C(Reali)
-    A--> D(Caratteri)
-    B--> E(int, short, long)
-    C--> F(float, double, long double)
-    D--> G(char)
-```
-  </div>
-  <div class="basis-1/4">
-  </div>
-
+<div class="abs-br m-6 flex gap-2">
+  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon:edit />
+  </button>
+  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-github />
+  </a>
 </div>
 
----
-
-# Interi
-
-
-  <div>
-    <h3 class="pb-6"> con segno (signed)</h3>
-    <table class="table-auto border-spacing-4">
-      <thead class="bg-indigo-500 text-white">
-        <tr>
-          <th>Tipo</th>
-          <th>N° bit</th>
-          <th>Minimo</th>
-          <th>Massimo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="font-semibold">short</td>
-          <td>16</td>
-          <td>-32 768</td>
-          <td>+32 767</td>
-        </tr>
-        <tr>
-          <td class="font-semibold">int</td>
-          <td>32</td>
-          <td>-2 147 483 648</td>
-          <td>+2 147 483 647</td>
-        </tr>
-        <tr>
-          <td class="font-semibold">long</td>
-          <td>64</td>
-          <td>-9.223372e+18</td>
-          <td>+9.223372e+18</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
+<!--
+The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+-->
 
 ---
-
-# Interi
-<div>
-    <h3 class="pb-6"> senza segno (unsigned)</h3>
-    <table class="table-auto border-spacing-4">
-      <thead class="bg-indigo-500 text-white">
-        <tr>
-          <th>Tipo</th>
-          <th>N° bit</th>
-          <th>Minimo</th>
-          <th>Massimo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="font-semibold">unsigned short</td>
-          <td>16</td>
-          <td>0</td>
-          <td>65 5365</td>
-        </tr>
-        <tr>
-          <td class="font-semibold">unsigned int</td>
-          <td>32</td>
-          <td>0</td>
-          <td>4 294 967 295</td>
-        </tr>
-        <tr>
-          <td class="font-semibold">unsigned long</td>
-          <td>64</td>
-          <td>0</td>
-          <td>circa 1.84e+19</td>
-        </tr>
-      </tbody>
-    </table>
-</div>
-
+transition: fade-out
 ---
 
-# Reali
+# What is Slidev?
 
-<div>
-    <h3 class="pb-6"> senza segno (unsigned)</h3>
-    <table class="table-auto border-spacing-4">
-      <thead class="bg-indigo-500 text-white">
-        <tr>
-          <th>Tipo</th>
-          <th>N° bit</th>
-          <th>Cifre significative</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="font-semibold">float</td>
-          <td>32</td>
-          <td>6-7</td>        
-        </tr>
-        <tr>
-          <td class="font-semibold">double</td>
-          <td>64</td>
-          <td>15-16</td>
-        </tr>
-        <tr>
-          <td class="font-semibold">long double</td>
-          <td>128</td>
-          <td>?</td>
-        </tr>
-      </tbody>
-    </table>
-</div>
+Slidev is a slides maker and presenter designed for developers, consist of the following features
 
----
+- 📝 **Text-based** - focus on the content with Markdown, and then style them later
+- 🎨 **Themable** - theme can be shared and used with npm packages
+- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
+- 🤹 **Interactive** - embedding Vue components to enhance your expressions
+- 🎥 **Recording** - built-in recording and camera view
+- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
+- 🛠 **Hackable** - anything possible on a webpage
 
-# Caratteri
-
-<p>Una variabile <code>char</code> occupa 8 bit di memoria.</p>
-
-<img src="/ascii.jpeg"/>
-
-<style>
- img{
-  margin: auto;
-  width: 80%;
- } 
-
-</style>
-
-
----
-
- # Caratteri
-
-```c
-#include <stdio.h>
-
-int main(void) 
-{
-  char var1 = 'A';
-  char var2 = 65;
-
-  printf("Le due variabili hanno lo stesso contenuto!\n");
-  printf("Contenuto di var1: %c\n", var1);
-  printf("Contenuto di var2: %c\n", var2);
-    
-  return 0;
-}
-```
-
----
-
-# Variabili
-
-Una variabile è un'area di memoria nella RAM caratterizzata da:
-
-- tipo
-- nome (*identificatore*)
-
-**Dichiarazione**
-
-Per poter utilizzare una variabile è necessario dichiararla, ovvero comunicare al compilatore che si intende utilizzare un dato di un certo tipo.
-```c
-int numero, x, y;
-float temperatura;
-char car;
-```
-
-**Inizializzazione**
-
-All'atto della dichiarazione, è possibile assegnare un valore alle variabili. (consigliato)
-```c
-int numero, x = 0, y = 0;
-```
-
----
-
-# Variabili
-
-Altre operazioni:
-
-**Assegnazione di un valore** 
-```c
-numero = 666; 🤟😈
-```
-
-**Assegnazione di una variabile** 
-```c
-numero = x;
-```
-
-
-**Assegnazione di un'espressione** 
-```c
-numero = 666 / 2;
-y = numero + x;
-```
-
-È possibile eseguire operazioni arimetiche solo tra *variabili dello stesso tipo*, altrimenti il compilatore ci segnalerà un errore (studieremo più avanti alcune eccezioni!).
-
----
-
-# Identificatori
-
-Alcune regole da rispettare per scegliere i nomi delle variabili/costanti.
-
-**Un identificatore può essere composto da**:
-
-- lettere maiuscole e minuscole
-- numeri
-- simbolo di underscore
-
-```c
-Pippo, x1, x2, mano_dx, mano_sx ✅
-```
 <br>
-<hr>
+<br>
 
-**Un identificatore non può**:
+Read more about [Why Slidev?](https://sli.dev/guide/why)
 
-- iniziare con un numero
-- essere una parola chiave del linguaggio C (es: main, return ...)
+<!--
+You can have `style` tag in markdown to override the style for the current page.
+Learn more: https://sli.dev/guide/syntax#embedded-styles
+-->
 
-
-```c
-10_x, main, return, ❌
-```
-
-Il linguaggio C è sensibile alle maiuscole/minuscole, quindi l'identificatore <code>id</code> è diverso da <code>ID</code>.
-
----
-
-# Calcolo dell'area di un rettangolo
-
-```c
-#include <stdio.h>
-
-int main(void) 
-{
-  float area;
-  float base;
-  float altezza;
-
-  base = 3;
-  altezza = 5;
-  area = base * altezza;
-  
-  printf("Area rettangolo: %f\n", area);
-    
-  return 0;
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
+</style>
+
+<!--
+Here is another comment.
+-->
+
+---
+layout: default
+---
+
+# Table of contents
+
+```html
+<Toc minDepth="1" maxDepth="1"></Toc>
 ```
 
+<Toc maxDepth="1"></Toc>
+
 ---
-clicks: 6
+transition: slide-up
+level: 2
 ---
 
-# Cenni sulla funzione printf
+# Navigation
 
-Ci permette di comunicare in output (sulla console) i risultati dell'elaborazione.
+Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
 
-<div class="flex">
-  <div class="basis-1/2">
+## Keyboard Shortcuts
 
-```c {all|9|10|11|12|13|all}
-#include <stdio.h>
+|     |     |
+| --- | --- |
+| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
+| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
+| <kbd>up</kbd> | previous slide |
+| <kbd>down</kbd> | next slide |
 
-int main(void) 
-{
-  int i = 2;
-  float r = 7.8;
-  char car = '@';
+<!-- https://sli.dev/guide/animations.html#click-animations -->
+<img
+  v-click
+  class="absolute -bottom-9 -left-7 w-80 opacity-50"
+  src="https://sli.dev/assets/arrow-bottom-left.svg"
+  alt=""
+/>
+<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
-  printf("Questa è una stringa 123@! \n");
-  printf("Numero intero: %d \n", i);
-  printf("Numero reale: %f \n", r);
-  printf("Nome: %s \n", "Salvo");
-  printf("Carattere: %c \n", car);
-  
-  
-  return 0;
+---
+layout: image-right
+image: https://source.unsplash.com/collection/94734566/1920x1080
+---
+
+# Code
+
+Use code snippets and get the highlighting directly, and even types hover![^1]
+
+```ts {all|5|7|7-8|10|all} twoslash
+// TwoSlash enables TypeScript hover information
+// and errors in markdown code blocks
+// More at https://shiki.style/packages/twoslash
+
+import { computed, ref } from 'vue'
+
+const count = ref(0)
+const doubled = computed(() => count.value * 2)
+
+doubled.value = 2
+```
+
+<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
+
+<!-- This allow you to embed external code blocks -->
+<<< @/snippets/external.ts#snippet
+
+<!-- Footer -->
+[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+
+<!-- Inline style -->
+<style>
+.footnotes-sep {
+  @apply mt-5 opacity-10;
 }
-```
-  </div>
-  <div class="basis-1/2">
-    <ul style="list-style: none;" class=" mx-8 ">
-      <li v-click="1">stringa di caratteri</li>
-      <li v-click="2"><strong>%d</strong> per stampare un intero</li>
-      <li v-click="3"><strong>%f</strong> per stampare un reale</li>
-      <li v-click="4"><strong>%c</strong> per stampare un carattere</li>
-      <li v-click="5"><strong>%s</strong> per stampare una stringa</li>
-      <li v-click="6"><strong>\n</strong> per andare a capo</li>
-    </ul>
-  </div>
-</div>
-
----
-
-# Scambio di variabili
-
-```c
-int main(void) 
-{
-  float a = 3;
-  float b = 5;
-  float temp;
-  
-  printf("Valore a prima: %f \n", a);
-  printf("Valore b prima: %f \n", b);
-  
-  temp = a;
-  a = b;
-  b = temp;
-  
-  printf("Valore a dopo: %f \n", a);
-  printf("Valore b dopo: %f \n", b);
-  
-  return 0;
+.footnotes {
+  @apply text-sm opacity-75;
 }
-
-```
----
-
-# Costanti
-
-Una costante è un'area di memoria nella RAM che identifica dati che **non possono essere modificati**.
-
-Nel linguaggio C esistono due modi per definire una costante:
-- attraverso la parola chiave `const`
-- attraverso la direttiva al preprocessore `#define`
-
-Nel primo caso, la costante viene vista come una "variabile con valore fisso".
-
-Nel secondo caso, il compilatore sostituirà a tutte le occorrenze dell'identificatore il valore associato, senza che vi sia alcuna locazione di memoria associata alla costante.
-
----
-clicks: 2
----
-
-# Area del cerchio
-
-<div class="flex">
-  <div class="basis-1/2">
-
-```c {all|5|all}
-#include <stdio.h>
-
-int main(void) 
-{
-  const float PIGRECO = 3.1415;
-  float raggio = 5;
-  float area;
-  
-  area = raggio * raggio * pigreco;
-  printf("Area del cerchio: %f \n", area);
-
-  return 0;
+.footnote-backref {
+  display: none;
 }
-```
-  </div>
-  <div class="basis-1/2">
-    <ul style="list-style: none;" class=" mx-8 ">
-      <li v-click="1"><strong>const</strong> per definire una costante</li>
-      <li v-click="1"><p>convenzione: costanti con identificatori maiuscoli</p></li>
-    </ul>
-  </div>
-</div>
-
----
-clicks: 2
----
-
-# Area del cerchio
-
-<div class="flex">
-  <div class="basis-1/2">
-
-```c {all|2|all}
-#include <stdio.h>
-#define PIGRECO 3.1415
-
-int main(void) 
-{
-  float raggio = 5;
-  float area;
-
-  area = raggio * raggio * PIGRECO;
-  printf("Area del cerchio: %f \n", area);
-
-  return 0;
-}
-```
-  </div>
-  <div class="basis-1/2">
-    <ul style="list-style: none;" class=" mx-8 ">
-      <li v-click="1"><strong>define</strong> per definire una costante</li>
-      <li v-click="1"><p>convenzione: costanti con identificatori maiuscoli</p></li>
-    </ul>
-  </div>
-</div>
-
+</style>
 
 ---
 
-# Operatori aritmetici
+# Components
 
+<div grid="~ cols-2 gap-4">
 <div>
-    <table class="table-auto border-spacing-4">
-      <thead class="bg-indigo-500 text-white">
-        <tr>
-          <th>Operatore</th>
-          <th>Esempio</th>
-          <th>Significato</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="font-semibold">+</td>
-          <td>a + b</td>
-          <td>Somma tra a e b</td>
-        </tr>
-        <tr>
-          <td class="font-semibold">-</td>
-          <td>a - b</td>
-          <td>Differenza tra a e b</td>
-        </tr>
-        <tr>
-          <td class="font-semibold">*</td>
-          <td>a * b</td>
-          <td>Moltiplicazione tra a e b</td>
-        </tr>
-        <tr>
-          <td class="font-semibold">/</td>
-          <td>a / b</td>
-          <td>Divisione tra a e b</td>
-        </tr>
-        <tr>
-          <td class="font-semibold">%</td>
-          <td>a % b</td>
-          <td>Resto della divisione intera tra a e b</td>
-        </tr>
-      </tbody>
-    </table>
+
+You can use Vue components directly inside your slides.
+
+We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
+
+```html
+<Counter :count="10" />
+```
+
+<!-- ./components/Counter.vue -->
+<Counter :count="10" m="t-4" />
+
+Check out [the guides](https://sli.dev/builtin/components.html) for more.
+
+</div>
+<div>
+
+```html
+<Tweet id="1390115482657726468" />
+```
+
+<Tweet id="1390115482657726468" scale="0.65" />
+
+</div>
 </div>
 
+<!--
+Presenter note with **bold**, *italic*, and ~~striked~~ text.
+
+Also, HTML elements are valid:
+<div class="flex w-full">
+  <span style="flex-grow: 1;">Left content</span>
+  <span>Right content</span>
+</div>
+-->
+
+---
+class: px-20
+---
+
+# Themes
+
+Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+
+<div grid="~ cols-2 gap-2" m="t-2">
+
+```yaml
+---
+theme: default
+---
+```
+
+```yaml
+---
+theme: seriph
+---
+```
+
+<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
+
+<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
+
+</div>
+
+Read more about [How to use a theme](https://sli.dev/themes/use.html) and
+check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
+
+---
+preload: false
+---
+
+# Animations
+
+Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
+
+```html
+<div
+  v-motion
+  :initial="{ x: -80 }"
+  :enter="{ x: 0 }">
+  Slidev
+</div>
+```
+
+<div class="w-60 relative mt-6">
+  <div class="relative w-40 h-40">
+    <img
+      v-motion
+      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
+      :enter="final"
+      class="absolute top-0 left-0 right-0 bottom-0"
+      src="https://sli.dev/logo-square.png"
+      alt=""
+    />
+    <img
+      v-motion
+      :initial="{ y: 500, x: -100, scale: 2 }"
+      :enter="final"
+      class="absolute top-0 left-0 right-0 bottom-0"
+      src="https://sli.dev/logo-circle.png"
+      alt=""
+    />
+    <img
+      v-motion
+      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
+      :enter="final"
+      class="absolute top-0 left-0 right-0 bottom-0"
+      src="https://sli.dev/logo-triangle.png"
+      alt=""
+    />
+  </div>
+
+  <div
+    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
+    v-motion
+    :initial="{ x: -80, opacity: 0}"
+    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
+    Slidev
+  </div>
+</div>
+
+<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
+<script setup lang="ts">
+const final = {
+  x: 0,
+  y: 0,
+  rotate: 0,
+  scale: 1,
+  transition: {
+    type: 'spring',
+    damping: 10,
+    stiffness: 20,
+    mass: 2
+  }
+}
+</script>
+
+<div
+  v-motion
+  :initial="{ x:35, y: 40, opacity: 0}"
+  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
+
+[Learn More](https://sli.dev/guide/animations.html#motion)
+
+</div>
+
+---
+
+# LaTeX
+
+LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+
+<br>
+
+Inline $\sqrt{3x-1}+(1+x)^2$
+
+Block
+$$ {1|3|all}
+\begin{array}{c}
+
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
+= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+
+\nabla \cdot \vec{\mathbf{B}} & = 0
+
+\end{array}
+$$
+
+<br>
+
+[Learn more](https://sli.dev/guide/syntax#latex)
+
+---
+
+# Diagrams
+
+You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+
+<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
+
+```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
+sequenceDiagram
+    Alice->John: Hello John, how are you?
+    Note over Alice,John: A typical interaction
+```
+
+```mermaid {theme: 'neutral', scale: 0.8}
+graph TD
+B[Text] --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+```
+
+```mermaid
+mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectivness<br/>and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+```
+
+```plantuml {scale: 0.7}
+@startuml
+
+package "Some Group" {
+  HTTP - [First Component]
+  [Another Component]
+}
+
+node "Other Groups" {
+  FTP - [Second Component]
+  [First Component] --> FTP
+}
+
+cloud {
+  [Example 1]
+}
+
+database "MySql" {
+  folder "This is my folder" {
+    [Folder 3]
+  }
+  frame "Foo" {
+    [Frame 4]
+  }
+}
+
+[Another Component] --> [Example 1]
+[Example 1] --> [Folder 3]
+[Folder 3] --> [Frame 4]
+
+@enduml
+```
+
+</div>
+
+[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+
+---
+src: ./pages/multiple-entries.md
+hide: false
+---
+
+---
+layout: center
+class: text-center
+---
+
+# Learn More
+
+[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
