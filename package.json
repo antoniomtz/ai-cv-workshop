@@ -7,10 +7,10 @@
     "export-notes": "slidev export-notes"
   },
   "devDependencies": {
-    "@slidev/cli": "workspace:*",
+    "@slidev/cli": "0.47.5",
     "@slidev/theme-default": "^0.25.0",
     "@slidev/theme-seriph": "^0.25.0",
-    "@slidev/types": "workspace:*",
+    "@slidev/types": "0.47.5",
     "nodemon": "^3.0.3"
   }
 }
