@@ -14,7 +14,7 @@ drawings:
 defaults:
   foo: true
 transition: slide-left
-title: Welcome to Slidev
+title: Introduction to Artificial Intelligence and Computer Visionq
 mdc: true
 ---
 
