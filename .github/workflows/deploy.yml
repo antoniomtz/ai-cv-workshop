@@ -24,6 +24,8 @@ jobs:
         run: npm install
       - name: Install slidev
         run:  npm i -g @slidev/cli
+      - name: Install for PDF  
+        run: npm i -D playwright-chromium
       - name: Build
         run: npm run build -- --base /ai-cv-workshop/
       - uses: actions/configure-pages@v4
