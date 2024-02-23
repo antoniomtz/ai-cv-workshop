@@ -1,25 +1,31 @@
 name: Deploy pages
 on: push
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: 'lts/*'
+
       - name: Install dependencies
         run: npm install
       - name: Install slidev
         run:  npm i -g @slidev/cli
-      - name: Install for PDF  
-        run: npm i -D playwright-chromium
       - name: Build
-        run: slidev build --base /ai-cv-workshop/
+        run: npm run build -- --base /ai-cv-workshop/
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
