@@ -78,10 +78,6 @@ transition: slide-left
 
 # Table of contents
 
-```html
-<Toc minDepth="1" maxDepth="1"></Toc>
-```
-
 <Toc maxDepth="1"></Toc>
 
 ---
@@ -91,30 +87,20 @@ level: 2
 
 # Introduction of AI and CV
 
-## Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+## Intelligence queue management
+<br/>
+<center>
+  <video width="600" height="300" controls>
+    <source src="assets/intelligent-queue.mp4" type="video/mp4">
+  </video>
+</center>
 
 ---
 layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: ./assets/intel-ai-graphic.png
 ---
 
-# Code
+# Introduction of AI and CV
 
 Use code snippets and get the highlighting directly, and even types hover![^1]
 
