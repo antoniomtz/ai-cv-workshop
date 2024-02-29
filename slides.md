@@ -91,7 +91,7 @@ level: 2
 <br/>
 <center>
   <video width="600" height="300" controls>
-    <source src="assets/intelligent-queue.mp4" type="video/mp4">
+    <source src="/assets/intelligent-queue.mp4" type="video/mp4">
   </video>
 </center>
 
