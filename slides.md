@@ -101,8 +101,7 @@ level: 2
 
 ---
 layout: image-right
-transition: slide-left
-image: ./assets/ai.jpg
+image: ./assets/ai-graphics.jpg
 ---
 
 # Definitions
