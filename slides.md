@@ -101,7 +101,7 @@ level: 2
 
 ---
 layout: image-right
-image: ./assets/ai-graphics.jpg
+image: ./images/ai-graphics.jpg
 ---
 
 # Definitions
