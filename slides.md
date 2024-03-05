@@ -102,7 +102,7 @@ level: 2
 ---
 layout: image-right
 transition: slide-left
-image: ./assets/intel-ai-graphic.png
+image: ./assets/intel-ai-graphic.jpg
 ---
 
 # Definitions
