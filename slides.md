@@ -102,6 +102,7 @@ level: 2
 ---
 layout: image-right
 image: ./images/ai-graphics.jpg
+transition: slide-left
 ---
 
 # Definitions
@@ -208,6 +209,11 @@ transition: slide-left
 
 </div>
 
+---
+layout: cover
+transition: slide-left
+---
+# AI and CV Basics
 
 ---
 transition: slide-left
@@ -227,6 +233,38 @@ flowchart LR
     data --> Annotation --> Training --> model --> inference   
 ```
 </center>
+---
+transition: slide-left
+---
+# Type of CV Models
+<div grid="~ cols-2 gap-4">
+  <div>
+    <ul>
+    <li>Classification</li>
+    <li>Detection</li>
+    <li>Semantic Segmentation</li>
+    <li>Instance segmentation</li>
+    </ul>
+  </div>
+
+  <div>
+    <img src="/assets/models.jpg" />
+  </div>
+
+</div>
+---
+layout: image-right
+image: ./images/dogs.jpg
+transition: slide-left
+---
+# Data Collection
+
+* Collect-Create hundresds or thousands of images for the desire output.
+
+# Annotation
+
+* Annotate 
+
 ---
 layout: center
 class: text-center
