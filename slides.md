@@ -263,7 +263,7 @@ transition: slide-left
 
 # Annotation
 
-* Annotate 
+* 
 
 ---
 layout: center
