@@ -73,14 +73,6 @@ Here is another comment.
 -->
 
 ---
-transition: slide-left
----
-
-# Table of contents
-
-<Toc maxDepth="1"></Toc>
-
----
 layout: cover
 transition: slide-left
 ---
@@ -263,13 +255,82 @@ transition: slide-left
 
 # Annotation
 
-* 
+* Manually indentify desired object on each image. (object detection)
+* Manually name each image (classification)
+
+# Training
+
+* Tensorflow
+* Pytorch 
+
+# Model & Inferencing
+
+* Use your model with your application
 
 ---
-layout: center
-class: text-center
+layout: cover
+transition: slide-left
 ---
 
-# Learn More
+# Intel Software and Hardware on AI
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+---
+transition: slide-left
+---
+
+# Intel GETi
+
+<div grid="~ cols-2 gap-4">
+  <div>
+    <ul>
+      <li>Train models for classification, object detection, segmentation or anomaly detection</li>
+      <li>Annotation tools</li>
+      <li>Optimized models for Intel architecture (CPU,GPUS)</li>      
+    </ul>
+  </div>
+
+  <div>
+    <img src="/assets/intel-geti.jpg"  />
+    <center>
+      <img src="/assets/intel-geti-1024.jpeg" width="200" />    
+      geti.intel.com
+    </center>
+  </div>
+
+</div>
+
+---
+transition: slide-left
+---
+
+# Intel openVINO
+
+* Opensource toolkit that accelerates AI inference.
+* Used for AI development and integration of deep learning in domains like computer vision, LLM and genAI.
+
+<center>
+  <img src="/assets/openvino.jpg" width="800"  />
+</center>
+
+
+---
+transition: slide-left
+---
+
+# Intel openVINO Model Server
+
+* A scalable inference server for models opmitized with OpenVINO.
+
+<center>
+  <img src="/assets/ovms_diagram.jpg" width="800"  />
+</center>
+
+---
+transition: slide-left
+---
+
+# Intel dlstreamer
+
+<center>
+  <img src="/assets/dlstreamer.gif" width="500" />
+</center>
