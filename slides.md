@@ -46,7 +46,6 @@ transition: slide-left
   <li>Introduction of AI and CV</li>
   <li>AI and CV Basics</li>
   <li>Intel SW and HW</li>
-  <li>Intel openVINO toolkit</li>
   <li>Hands-on with openVINO</li>
   <li>Questions</li>
 </ol>    
@@ -329,8 +328,82 @@ transition: slide-left
 transition: slide-left
 ---
 
-# Intel dlstreamer
+# Intel DLStreamer
 
-<center>
-  <img src="/assets/dlstreamer.gif" width="500" />
-</center>
+* Streaming media analytics framework, based on Gstreamer.
+* Enables developers to create deep learning pipelines across Intel architecture.
+
+<div grid="~ cols-2 gap-2" m="t-2">
+  <img src="/assets/dlstreamer.jpg" width="350" />
+  <img src="/assets/dlstreamer.gif"  />
+</div> 
+
+---
+transition: side-left
+---
+
+# Intel Hardware in AI
+
+<div grid="~ cols-2 gap-4">
+
+<div markdown="1">
+<ul>
+<li>CPU<ul>
+  <li>Atom</li>
+  <li>Core 5,7,9</li>
+  <li>Xeon</li>
+</ul>
+</li>
+<li>GPU<ul>
+  <li>iGPU</li>
+  <li>Flex GPU</li>
+  <li>Arc GPU</li>
+</ul>
+</li>
+<li>VPU</li>
+<li>NPU</li>
+</ul>
+</div>
+
+<div>
+  <img src="/assets/intel-hw.jpg" />
+</div>
+</div>
+
+---
+transition: side-left
+layout: cover
+---
+
+# Hands-on with openVINO
+
+---
+transition: side-left
+---
+
+# Intel DLStreamer
+
+<div grid="~ cols-2 gap-4">
+
+  <div>
+    <img src="/assets/dlstreamer-syntax.jpg" />
+  </div>
+
+  <div>
+    <img src="/assets/dlstreamer-demo.gif" />
+  </div>
+
+</div>
+
+---
+transition: side-left
+layout: full
+---
+
+<video controls>
+  <source src="/assets/dlstreamer-demo-small.mp4" type="video/mp4">
+</video>
+
+---
+transition: side-left
+---
