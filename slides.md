@@ -366,7 +366,10 @@ transition: side-left
 </div>
 
 <div>
-  <img src="/assets/intel-hw.jpg" />
+  <center>
+    <img src="/assets/intel-hw.jpg" width="400" />  
+    <img src="/assets/intel-cpu.jpg" width="300" />
+  </center>
 </div>
 </div>
 

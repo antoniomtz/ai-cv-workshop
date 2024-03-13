@@ -1,4 +1,4 @@
-# ai-cv-workshop
+# AI and CV workshop on Intel software
 Material for AI and CV workshop 
 
 [Slides](https://antoniomtz.github.io/ai-cv-workshop/)
