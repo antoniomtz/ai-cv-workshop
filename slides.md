@@ -381,6 +381,7 @@ transition: side-left
 ---
 transition: side-left
 layout: cover
+background: ./images/background.jpg
 ---
 
 # Hands-on with openVINO
