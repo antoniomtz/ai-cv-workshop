@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: ./images/background.jpg
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -50,30 +50,11 @@ transition: slide-left
   <li>Questions</li>
 </ol>    
 
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
-<!-- <style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style> -->
-
-<!--
-Here is another comment.
--->
 
 ---
 layout: cover
 transition: slide-left
+background: ./images/background.jpg
 ---
 # Introduction of AI and CV
 
@@ -219,6 +200,7 @@ transition: slide-left
 ---
 layout: cover
 transition: slide-left
+background: ./images/background.jpg
 ---
 # AI and CV Basics
 
@@ -285,6 +267,7 @@ transition: slide-left
 ---
 layout: cover
 transition: slide-left
+background: ./images/background.jpg
 ---
 
 # Intel Software and Hardware on AI
@@ -437,16 +420,22 @@ Prerequisites:
 
 Install <a href="https://docs.docker.com/desktop/install/windows-install/" target="_blank">Docker on Windows</a>
 
+<v-click>
+
 ## Step 1 Download Moba Xterm
 
 <a href="https://mobaxterm.mobatek.net/download-home-edition.html" target="_blank">MobaXterm</a>
+</v-click>
+<v-click>
 
 ## Step 2 Run DLstreamer docker container
 
 ```docker
 docker run -it --rm --network=host --entrypoint /bin/bash --name dlstreamer_test --privileged --user root openvino/ubuntu18_data_dev
 ```
-<~br/>
+<br/>
+</v-click>
+<v-click>
 
 ## Step 3 Download Models
 
@@ -454,6 +443,7 @@ docker run -it --rm --network=host --entrypoint /bin/bash --name dlstreamer_test
 cd /opt/intel/openvino/data_processing/dl_streamer/samples
 ./download_models.sh
 ```
+</v-click>
 
 ---
 transition: side-left
@@ -493,6 +483,7 @@ transition: side-left
 ```bash
 pip install -q "openvino>=2023.1.0"
 ```
+<v-click>
 
 ## Initialize openVINO runtime 
 
@@ -500,6 +491,9 @@ pip install -q "openvino>=2023.1.0"
 import openvino as ov
 core = ov.Core()
 ```
+</v-click>
+
+<v-click>
 
 ## Loading a model
 
@@ -508,6 +502,9 @@ classification_model_xml = "model/classification.xml"
 model = core.read_model(model=classification_model_xml)
 compiled_model = core.compile_model(model=model, device_name="CPU") # Compile model to a specific device
 ```
+</v-click>
+
+<v-click>
 
 ## Analyze the input
 
@@ -516,21 +513,11 @@ model.inputs # [<Output: names[input, input:0] shape[1,3,224,224] type: f32>]
 ```
 
 * model expects one input and input data with the batch size of 1 (N), 3 channels ( C) , and images with a height (H) and width (W) equal to 224.
-
+</v-click>
 ---
 transition: side-left
 layout: two-cols
 ---
-
-<style>
-.col-left .column:nth-child(1) {
-  flex: 0 0 70%; /* adjust the percentage value as needed */
-}
-
-.col-right .column:nth-child(2) {
-  flex: 0 0 30%; /* adjust the percentage value as needed */
-}
-</style>
 
 ## Analyze the output
 
@@ -540,6 +527,8 @@ model.outputs # [<Output: names[MobilenetV3/Predictions/Softmax] shape[1,1001] t
 
 * shape of [1, 1001] where 1001 is the number of classes
 
+<v-click>
+
 ## Load an Image
 
 ```python
@@ -548,6 +537,9 @@ input_image = cv2.resize(src=image, dsize=(224, 224)) # Resize image
 input_image = np.expand_dims(input_image, 0) # Reshape image
 input_image.shape # (1, 3, 224, 224)
 ```
+</v-click>
+
+<v-click>
 
 ## Do Inference
 ```python
@@ -556,7 +548,93 @@ result_infer = compiled_model([input_image])[output_layer]
 result_index = np.argmax(result_infer)
 imagenet_classes[result_index] # n02099267 flat-coated retriever
 ```
+</v-click>
 
 ::right::
 
 <img src="/assets/dog.png" />
+
+---
+transition: side-left
+---
+
+# openVINO Jupyter notebooks
+
+<a href="https://github.com/openvinotoolkit/openvino_notebooks" target="_blank">https://github.com/openvinotoolkit/openvino_notebooks</a>
+
+<div grid="~ cols-3 gap-2" m="t-1">
+  <img src="https://user-images.githubusercontent.com/47499836/163544861-fa2ad64b-77df-4c16-b065-79183e8ed964.png" width="250"/>
+  <img src="https://user-images.githubusercontent.com/4547501/141471665-82b28c86-cf64-4bfe-98b3-c314658f2d96.gif" width="250"/>
+  <img src="https://docs.openvino.ai/2024/_images/208-optical-character-recognition-with-output_26_0.png" width="250" />
+</div>
+
+<div grid="~ cols-3 gap-2" m="t-1">
+  <img src="https://docs.openvino.ai/2024/_images/230-yolov8-instance-segmentation-with-output_11_1.png" width="250" />
+  <img src="https://user-images.githubusercontent.com/91237924/210479548-b70dbbaa-5948-4e49-b48e-6cb6613226da.gif" width="300" />
+  <img src="https://user-images.githubusercontent.com/10940214/151552326-642d6e49-f5a0-4fc1-bf14-ae3f457e1fec.gif" width="300" />
+</div>
+
+---
+transition: side-left
+layout: two-cols
+---
+
+# AI popular trends (genAI)
+
+* Text to Video/Image generation
+* Large Language Models (LLM)
+* Natural Language procesing (NLP)
+* Sound generators
+
+::right::
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Darth Vader is surfing on waves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<center>
+  <td style="text-align:center"><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/darthvader_cerpense.gif" width="200" alt=""></td>
+</center>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">a beautiful pink unicorn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<center>
+  <td style="text-align:center"><img src="https://user-images.githubusercontent.com/29454499/277367065-13a8f622-8ea7-4d12-b3f8-241d4499305e.png" width="200" alt=""></td>
+</center>
+</tr>
+</tbody>
+</table>
+
+---
+transition: side-left
+---
+
+# How to start developing AI/CV applications
+
+* Install an IDE (<a href="https://code.visualstudio.com/" target="_blank">vscode</a>)
+* Install python or c++, openVINO and Docker
+* Demos from openVINO model zoo <a href="https://github.com/openvinotoolkit/open_model_zoo/tree/master/demos" target="_blank">repo</a> 
+* Retail use cases using openVINO model server gRPC or cAPI and docker containers (<a href="https://github.com/intel-retail/retail-use-cases" target="_blank">link</a>)
+<center>
+  <img src="/assets/vscode.jpg" width="420"/>
+</center>
+
+
+---
+layout: cover
+background: ./images/background.jpg
+---
+# Questions
