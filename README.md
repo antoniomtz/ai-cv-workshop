@@ -12,6 +12,8 @@ Material for AI and CV workshop
 
 # Intel DevCloud (Optional)
 
+You can also use the Intel DevCloud to run all openVINO jupyter notebooks:
+
 1. Create an account or sign in <a href="https://notebooks.edge.devcloud.intel.com/hub/login?next=/lab&RefURL=/content/www/us/en/develop/tools/devcloud/edge/build.html" target="_blank">here</a>
 2. Navigate to the correct folder on the left side, and open the desired notebook.
 3. Make sure to use Python 3.10 (OpenVINO 2023.2 latest) kernel.
