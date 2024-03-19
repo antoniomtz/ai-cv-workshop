@@ -43,7 +43,7 @@ transition: slide-left
 # Outline
 
 <ol>
-  <li>Introduction of AI and CV</li>
+  <li>Introduction to AI and CV</li>
   <li>AI and CV Basics</li>
   <li>Intel SW and HW</li>
   <li>Hands-on with openVINO</li>
@@ -56,7 +56,7 @@ layout: cover
 transition: slide-left
 background: ./images/background.jpg
 ---
-# Introduction of AI and CV
+# Introduction to AI and CV
 
 ---
 transition: slide-left
