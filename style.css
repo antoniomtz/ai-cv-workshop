@@ -4,7 +4,7 @@
   font-family: Intel;
   font-style: normal;
   font-weight: 400;  
-  src: url('./fonts/IntelOneMono-Regular.woff2') format('woff2')
+  src: url('./fonts/intelone-display-regular.woff2') format('woff2')
 }
 
 @font-face {  
@@ -24,7 +24,7 @@
 }
 
 h1{
-  font-family: Montserrat, neo sans pro;
+  font-family: Intel,Montserrat, neo sans pro;
   font-size: 35px !important;
   color: #0068B5 !important;    
 }
