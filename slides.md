@@ -14,13 +14,15 @@ mdc: true
 
 # Artificial Intelligence and Computer Vision
 
-Workshop
+<style>
+h1 {
+  color: white !important;
+  @apply !text-shadow-lg;
+  @apply !text-center;
+}
+</style>
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
+Workshop
 
 <div class="abs-br m-6 flex gap-2">
   <!-- <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
@@ -39,7 +41,6 @@ The last comment block of each slide will be treated as slide notes. It will be 
 ---
 transition: slide-left
 ---
-
 # Outline
 
 <ol>
@@ -50,13 +51,24 @@ transition: slide-left
   <li>Questions</li>
 </ol>    
 
-
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
 ---
 layout: cover
 transition: slide-left
 background: ./images/background.jpg
 ---
 # Introduction to AI and CV
+
+<style>
+h1 {
+  color: white !important;
+  @apply !text-shadow-lg;
+  @apply !text-center;
+
+}
+</style>
 
 ---
 transition: slide-left
@@ -70,6 +82,10 @@ level: 2
     <source src="/assets/intelligent-queue.mp4" type="video/mp4">
   </video>
 </center>
+
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
 
 ---
 layout: image-right
@@ -124,6 +140,10 @@ transition: slide-left
 
 </div>
 
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
+
 ---
 transition: slide-left
 ---
@@ -143,6 +163,9 @@ transition: slide-left
 
 </div>
 
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
 
 ---
 transition: slide-left
@@ -177,6 +200,10 @@ transition: slide-left
 
 </div>
 
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
+
 ---
 transition: slide-left
 ---
@@ -197,12 +224,25 @@ transition: slide-left
 
 </div>
 
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
+
 ---
 layout: cover
 transition: slide-left
 background: ./images/background.jpg
 ---
 # AI and CV Basics
+
+<style>
+h1 {
+  color: white !important;
+  @apply !text-shadow-lg;
+  @apply !text-center;
+
+}
+</style>
 
 ---
 transition: slide-left
@@ -222,6 +262,10 @@ flowchart LR
     data --> Annotation --> Training --> model --> inference   
 ```
 </center>
+
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
 ---
 transition: slide-left
 ---
@@ -241,6 +285,11 @@ transition: slide-left
   </div>
 
 </div>
+
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
+
 ---
 layout: image-right
 image: ./images/dogs.jpg
@@ -264,6 +313,8 @@ transition: slide-left
 
 * Use your model with your application
 
+<div class="footer"/>
+
 ---
 layout: cover
 transition: slide-left
@@ -271,6 +322,15 @@ background: ./images/background.jpg
 ---
 
 # Intel Software and Hardware on AI
+
+<style>
+h1 {
+  color: white !important;
+  @apply !text-shadow-lg;
+  @apply !text-center;
+
+}
+</style>
 
 ---
 transition: slide-left
@@ -297,6 +357,10 @@ transition: slide-left
 
 </div>
 
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
+
 ---
 transition: slide-left
 ---
@@ -310,6 +374,9 @@ transition: slide-left
   <img src="/assets/openvino.jpg" width="800"  />
 </center>
 
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
 
 ---
 transition: slide-left
@@ -322,6 +389,10 @@ transition: slide-left
 <center>
   <img src="/assets/ovms_diagram.jpg" width="800"  />
 </center>
+
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
 
 ---
 transition: slide-left
@@ -337,6 +408,9 @@ transition: slide-left
   <img src="/assets/dlstreamer.gif"  />
 </div> 
 
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
 ---
 transition: side-left
 ---
@@ -378,6 +452,9 @@ transition: side-left
 </div>
 </div>
 
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
 ---
 transition: side-left
 layout: cover
@@ -385,6 +462,15 @@ background: ./images/background.jpg
 ---
 
 # Hands-on with openVINO
+
+<style>
+h1 {
+  color: white !important;
+  @apply !text-shadow-lg;
+  @apply !text-center;
+
+}
+</style>
 
 ---
 transition: side-left
@@ -402,6 +488,10 @@ transition: side-left
     <img src="/assets/dlstreamer-demo.gif" />
   </div>
 
+</div>
+
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
 </div>
 
 ---
@@ -446,6 +536,10 @@ cd /opt/intel/openvino/data_processing/dl_streamer/samples
 ```
 </v-click>
 
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
+
 ---
 transition: side-left
 ---
@@ -464,6 +558,10 @@ gst-launch-1.0 urisourcebin buffer-size=4096 uri=https://github.com/intel-iot-de
 <center>
   <img src="/assets/facedetection.jpg" width="450" />
 </center>
+
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
 
 ---
 transition: side-left
@@ -515,6 +613,11 @@ model.inputs # [<Output: names[input, input:0] shape[1,3,224,224] type: f32>]
 
 * model expects one input and input data with the batch size of 1 (N), 3 channels ( C) , and images with a height (H) and width (W) equal to 224.
 </v-click>
+
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
+
 ---
 transition: side-left
 layout: two-cols
@@ -555,6 +658,10 @@ imagenet_classes[result_index] # n02099267 flat-coated retriever
 
 <img src="/assets/dog.png" />
 
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
+
 ---
 transition: side-left
 ---
@@ -573,6 +680,10 @@ transition: side-left
   <img src="https://docs.openvino.ai/2024/_images/230-yolov8-instance-segmentation-with-output_11_1.png" width="250" />
   <img src="https://user-images.githubusercontent.com/91237924/210479548-b70dbbaa-5948-4e49-b48e-6cb6613226da.gif" width="300" />
   <img src="https://user-images.githubusercontent.com/10940214/151552326-642d6e49-f5a0-4fc1-bf14-ae3f457e1fec.gif" width="300" />
+</div>
+
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
 </div>
 
 ---
@@ -619,6 +730,10 @@ layout: two-cols
 </tbody>
 </table>
 
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
+
 ---
 transition: side-left
 ---
@@ -633,9 +748,21 @@ transition: side-left
   <img src="/assets/vscode.jpg" width="420"/>
 </center>
 
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
 
 ---
 layout: cover
 background: ./images/background.jpg
 ---
 # Questions
+
+<style>
+h1 {
+  color: white !important;
+  @apply !text-shadow-lg;
+  @apply !text-center;
+
+}
+</style>

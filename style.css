@@ -1,11 +1,51 @@
 /* add any global style here */
 
-/* h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-} */
+@font-face {
+  font-family: Intel;
+  font-style: normal;
+  font-weight: 400;  
+  src: url('./fonts/IntelOneMono-Regular.woff2') format('woff2')
+}
+
+@font-face {  
+  font-family: neo sans pro;
+  font-style: normal;
+  font-weight: 400;
+  src:local('Neo Sans Pro'),url(https://fonts.cdnfonts.com/s/40085/NeoSansProRegular.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr73w5aXo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+h1{
+  font-family: Montserrat, neo sans pro;
+  font-size: 35px !important;
+  color: #0068B5 !important;    
+}
+
+.footer {
+  font-family: neo sans pro;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #0068B5;
+  color: white;
+  text-align: center;
+  height: 5%;
+  z-index:-30
+}
+
+.logo {
+  position: absolute;
+  bottom: 30px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */  
+  width: 100px; /* Adjust the width of the container */  
+  overflow: hidden; /* Ensure the background image doesn't overflow */  
+}
