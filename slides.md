@@ -297,7 +297,7 @@ transition: slide-left
 ---
 # Data Collection
 
-* Collect-Create hundresds or thousands of images for the desire output.
+* Collect-Create hundreds or thousands of images for the desire output.
 
 # Annotation
 

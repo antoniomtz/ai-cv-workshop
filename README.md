@@ -3,6 +3,12 @@ Material for AI and CV workshop
 
 [Slides](https://antoniomtz.github.io/ai-cv-workshop/)
 
+# Pre-requisites
+
+Install openVINO notebooks environment (optional if using colab or mybinder cloud environments)
+
+https://github.com/openvinotoolkit/openvino_notebooks?tab=readme-ov-file#-installation-guide
+
 # Exercises
 
 | Notebook | Description | Preview |
