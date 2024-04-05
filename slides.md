@@ -41,13 +41,35 @@ The last comment block of each slide will be treated as slide notes. It will be 
 ---
 transition: slide-left
 ---
+
+# Notices & Disclaimers
+<br/>
+Notices & Disclaimers
+
+Intel technologies may require enabled hardware, software or service activation.
+
+No product or component can be absolutely secure. 
+
+Your costs and results may vary. 
+
+Intel does not control or audit third-party data.  You should consult other sources to evaluate accuracy.
+
+© Intel Corporation.  Intel, the Intel logo, and other Intel marks are trademarks of Intel Corporation or its subsidiaries.  Other names and brands may be claimed as the property of others.
+
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
+
+---
+transition: slide-left
+---
 # Outline
 
 <ol>
   <li>Introduction to AI and CV</li>
   <li>AI and CV Basics</li>
   <li>Intel SW and HW</li>
-  <li>Hands-on with openVINO</li>
+  <li>Hands-on with OpenVINO</li>
   <li>Questions</li>
 </ol>    
 
@@ -111,7 +133,7 @@ transition: slide-left
   <ul>
     <li>AI and CV are important in our lives for several reasons:<ul>
       <li>Automation</li>
-      <li>Healthcare</li>
+      <li>Medicine</li>
       <li>Safety</li>
       <li>Customer experience</li>
     </ul>
@@ -128,8 +150,8 @@ transition: slide-left
   <div>
     <ul>
       <li>Robotics</li>
-      <li>Facial Recognition</li>
-      <li>Object Detection</li>
+      <li>Retail</li>
+      <li>Surveillance and Security</li>
       <li>Medical Imaging</li>
     </ul>
   </div>
@@ -170,23 +192,20 @@ transition: slide-left
 ---
 transition: slide-left
 ---
-# Object Detection Use Cases
+# Retail Use Cases
 
 <div grid="~ cols-2 gap-4">
   <div>
     <ul>
-      <li>Retail:
+      <li>Grocery stores:
         <ul>
           <li>Automated Self Checkout</li>
-          <li>Inventory Magagement</li>
-          <li>Customer Experience</li>
-        </ul>
+          <li>Inventory Magagement</li>                    
+        </ul>        
       </li>
-      <li>Self-driving Vehicles:
+      <li>Retail stores:
         <ul>
-          <li>Pedestrian detection</li>
-          <li>Trees,cars,etc detection</li>
-          <li>Lane detection</li>
+          <li>Customer Experience</li>
         </ul>
       </li>
     </ul>
@@ -207,12 +226,12 @@ transition: slide-left
 ---
 transition: slide-left
 ---
-# Facial Recognition Use Cases
+# Surveillance and Security Use Cases
 
 * Facial Authentication
   * Buildings
   * Phones
-* Criminal detection
+* Person of interest detection
   * Airports
   * Stores
 
@@ -259,7 +278,7 @@ flowchart LR
     data["Data Collection"]
     model["Model Creation"]
     inference["Inferencing Application"]
-    data --> Annotation --> Training --> model --> inference   
+    data --> Annotation --> Training --> model --> inference --> data   
 ```
 </center>
 
@@ -365,7 +384,7 @@ transition: slide-left
 transition: slide-left
 ---
 
-# Intel openVINO
+# Intel OpenVINO
 
 * Opensource toolkit that accelerates AI inference.
 * Used for AI development and integration of deep learning in domains like computer vision, LLM and genAI.
@@ -382,7 +401,7 @@ transition: slide-left
 transition: slide-left
 ---
 
-# Intel openVINO Model Server
+# Intel OpenVINO Model Server
 
 * A scalable inference server for models opmitized with OpenVINO.
 
@@ -411,6 +430,27 @@ transition: slide-left
 <div class="footer">
   <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
 </div>
+
+---
+transition: slide-left
+---
+
+# Intel Open-Source Contributions
+
+* Pytorch 
+* TensorFlow
+* openCV
+* Python
+* Scikit-learn
+
+<center>
+  <img src="/assets/opensource-tools.jpg" width="600" />
+</center>
+
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
+
 ---
 transition: side-left
 ---
@@ -461,7 +501,7 @@ layout: cover
 background: ./images/background.jpg
 ---
 
-# Hands-on with openVINO
+# Hands-on with OpenVINO
 
 <style>
 h1 {
@@ -577,14 +617,14 @@ transition: side-left
 
 # OpenVINO Runtime
 
-## Install openVINO python runtime
+## Install OpenVINO python runtime
 
 ```bash
 pip install -q "openvino>=2023.1.0"
 ```
 <v-click>
 
-## Initialize openVINO runtime 
+## Initialize OpenVINO runtime 
 
 ```python
 import openvino as ov
@@ -666,7 +706,7 @@ imagenet_classes[result_index] # n02099267 flat-coated retriever
 transition: side-left
 ---
 
-# openVINO Jupyter notebooks
+# OpenVINO Jupyter notebooks
 
 <a href="https://github.com/openvinotoolkit/openvino_notebooks" target="_blank">https://github.com/openvinotoolkit/openvino_notebooks</a>
 
@@ -741,9 +781,9 @@ transition: side-left
 # How to start developing AI/CV applications
 
 * Install an IDE (<a href="https://code.visualstudio.com/" target="_blank">vscode</a>)
-* Install python or c++, openVINO and Docker
-* Demos from openVINO model zoo <a href="https://github.com/openvinotoolkit/open_model_zoo/tree/master/demos" target="_blank">repo</a> 
-* Retail use cases using openVINO model server gRPC or cAPI and docker containers (<a href="https://github.com/intel-retail/retail-use-cases" target="_blank">link</a>)
+* Install python or c++, OpenVINO and Docker
+* Demos from OpenVINO model zoo <a href="https://github.com/openvinotoolkit/open_model_zoo/tree/master/demos" target="_blank">repo</a> 
+* Retail use cases using OpenVINO model server gRPC or cAPI and docker containers (<a href="https://github.com/intel-retail/retail-use-cases" target="_blank">link</a>)
 <center>
   <img src="/assets/vscode.jpg" width="420"/>
 </center>
