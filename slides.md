@@ -94,6 +94,18 @@ h1 {
 
 ---
 transition: slide-left
+---
+# Use case: Intelligence queue management
+<br/>
+
+<img src="/assets/queue-management.jpg" />
+
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
+
+---
+transition: slide-left
 level: 2
 ---
 
