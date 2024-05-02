@@ -29,4 +29,4 @@ You can also use the Intel DevCloud to run all openVINO jupyter notebooks:
 
 # Join our Discord!
 
-<a href="https://discord.gg/vs9nDT4e"><img src="https://cdn.iconscout.com/icon/free/png-512/free-discord-3691244-3073764.png?f=webp&w=256" width="100"/></a>
+<a href="https://discord.gg/2SpNRF4SCn"><img src="https://cdn.iconscout.com/icon/free/png-512/free-discord-3691244-3073764.png?f=webp&w=256" width="100"/></a>
