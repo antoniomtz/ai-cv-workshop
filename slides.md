@@ -122,6 +122,22 @@ level: 2
 </div>
 
 ---
+transition: slide-left
+level: 2
+---
+
+# Use case: Automated self checkout
+<center>
+  <video width="600" height="300" controls>
+    <source src="/assets/automated-checkout.webm" type="video/mp4">
+  </video>
+</center>
+
+<div class="footer">
+  <img src="/assets/Intel-logo-2022.png" class="logo" alt="Logo">
+</div>
+
+---
 layout: image-right
 image: ./images/ai-graphics.jpg
 transition: slide-left
